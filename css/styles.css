@@ -7,6 +7,7 @@
   --accent-color: #ffffff;
   --secondary-accent-color: #404bbf;
   --card-border-color: #e7e9fc;
+  --service-color: #8e8f99;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -340,11 +341,11 @@ img {
   display: flex;
   width: 100%;
   height: 100%;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--service-color);
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  color: #8e8f99;
+  color: var(--service-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -427,6 +428,66 @@ img {
 .footer-icon {
   fill: var(--secondary-background);
 }
+.footer-form {
+  width: 453px;
+  height: 80px;
+  margin-left: auto;
+}
+.form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.form {
+  display: flex;
+  gap: 24px;
+}
+.email-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  padding-left: 16px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.email-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--accent-color);
+}
+.email-input:focus {
+  border: 1px solid var(--secondary-accent-color);
+  outline: none;
+}
+
+.footer-button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background-color: var(--logo-button-color);
+  color: var(--accent-color);
+  text-align: center;
+  align-items: center;
+  padding: 8px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-icon {
+  fill: var(--accent-color);
+}
+.footer-button:focus {
+  background-color: var(--secondary-accent-color);
+}
 /* Portfolio */
 .our-works {
   padding: 96px 0 120px;
@@ -507,7 +568,7 @@ img {
 }
 .example-item:hover,
 .example-item:focus,
-.example-item:focus .example-cover-text{
+.example-item:focus .example-cover-text {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transform: translateY(0%);
@@ -539,14 +600,13 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   width: 408px;
   min-height: 584px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 24px;
+  padding: 72px 24px 24px;
 }
 .modal-close {
   width: 24px;
@@ -579,4 +639,167 @@ img {
   background-color: var(--secondary-accent-color);
   color: var(--accent-color);
   border: none;
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+}
+.modal-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.input-label input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.input-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--service-color);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--logo-button-color);
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-icon {
+  fill: var(--secondary-color);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  padding: 8px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  resize: none;
+  outline: transparent;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  margin-left: 8px;
+}
+
+.modal-comment:focus {
+  border-color: var(--logo-button-color);
+}
+
+.wrap-privacy {
+  margin-bottom: 24px;
+}
+
+.check-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--service-color);
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+}
+
+.modal-check:checked + .check-text span {
+  background-color: var(--secondary-accent-color);
+  border: none;
+  fill: var(--secondary-background);
+}
+
+.privacy-link {
+  color: var(--secondary-accent-color);
+}
+
+.button-send {
+  display: block;
+  color: var(--accent-color);
+  border: none;
+  background: var(--logo-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 48px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-send:hover,
+.button-send:focus {
+  background-color: var(--secondary-accent-color);
 }
