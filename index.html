@@ -529,16 +529,19 @@
         <div class="footer-form">
           <p class="form-text">Subscribe</p>
           <form class="form">
-            <label>
-              <input type="email" class="email-input" placeholder="E-mail" />
+            <label class="footer-label">
+              <input
+                type="email"
+                name="email"
+                class="email-input"
+                placeholder="E-mail"
+              />
             </label>
-            <div class="footer-conteiner-button">
-              <button class="footer-button">
-                Subscribe<svg class="button-icon" width="24" height="20">
-                  <use href="./images/icons.svg#icon-letter"></use>
-                </svg>
-              </button>
-            </div>
+            <button class="footer-button">
+              Subscribe<svg class="button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-letter"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -604,14 +607,15 @@
               </svg>
             </div>
           </div>
-          <label class="input-label" for="user-comment">Comment</label>
-          <textarea
-            name="user-comment"
-            id="user-comment"
-            class="modal-comment"
-            placeholder="Text input"
-          ></textarea>
-
+          <div class="input-comment">
+            <label class="input-label" for="user-comment">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              class="modal-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
           <div class="wrap-privacy">
             <input
               type="checkbox"
